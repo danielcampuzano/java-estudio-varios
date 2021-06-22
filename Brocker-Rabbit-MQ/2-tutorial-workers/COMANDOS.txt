@@ -1,0 +1,8 @@
+"C:\Program Files\Java\jdk1.8.0_152\bin\javac" -cp amqp-client-5.7.1.jar NewTask.java Worker.java
+
+"C:\Program Files\Java\jdk1.8.0_152\bin\java" -cp .;amqp-client-5.7.1.jar;slf4j-api-1.7.26.jar;slf4j-simple-1.7.26.jar Worker
+
+"C:\Program Files\Java\jdk1.8.0_152\bin\java" -cp .;amqp-client-5.7.1.jar;slf4j-api-1.7.26.jar;slf4j-simple-1.7.26.jar  NewTask Message1.
+"C:\Program Files\Java\jdk1.8.0_152\bin\java" -cp .;amqp-client-5.7.1.jar;slf4j-api-1.7.26.jar;slf4j-simple-1.7.26.jar  NewTask Message2........................
+"C:\Program Files\Java\jdk1.8.0_152\bin\java" -cp .;amqp-client-5.7.1.jar;slf4j-api-1.7.26.jar;slf4j-simple-1.7.26.jar  NewTask Message3........................
+
