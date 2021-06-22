@@ -1,0 +1,22 @@
+CompletableFuture is used for asynchronous programming in Java. Asynchronous programming is a means of writing non-blocking code by running a task on a separate thread than the main application thread and notifying the main thread about its progress, completion or failure.
+
+This way, your main thread does not block/wait for the completion of the task and it can execute other tasks in parallel.
+
+Having this kind of parallelism greatly improves the performance of your programs.
+
+***********************************************************************************************
+Limitations of the Future
+A Future cannot be mutually complete.
+We cannot perform further action on a Future's result without blocking.
+Future has not any exception handling.
+We cannot combine multiple futures.
+************************************************************************************************
+
+Web resources
+
+https://www.callicoder.com/java-8-completablefuture-tutorial/
+
+https://www.baeldung.com/java-completablefuture
+
+https://www.youtube.com/watch?v=3rJBLFA95Io
+

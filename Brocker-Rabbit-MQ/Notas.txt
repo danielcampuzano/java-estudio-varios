@@ -1,0 +1,38 @@
+***************MESSAHE BROKER*******************
+
+*A message broker helps to DECOUPLE applications
+
+*It helps with SCALABILITY
+
+*It can sit on his own machine -> It can offload some of the work that is donde by the application -> PERFORMANCE
+
+
+******************RABBIT MQ**********************************
+- Implementation of an A M Q P 0-9-1 -> message model
+
+-> The producer produces to an EXCHANGE instead of producing directly to the message queue.
+-> An EXCHANGE is like a post office that distributes messages according to their header address
+
+-> An EXCHANGE connects to many QUEUES by BINDINGS which can be referenced by the binding key
+
+-> The QUEUES connect to many CONSUMING SERVICES or CONSUMERS -> The CONSUMERS subscribe to the queues
+
+********************TYPES OF EXCHANGES*******************************
+
+1. Fanout -> It receives a message and duplicates it to every single queue that it knows about.
+
+2. Direct -> It routes the message to the BINDING KEY that matches with the message's ROUTING KEY
+
+3. TOPIC -> It's like a mix between fanout and direct -> The message has a topic and the bindings as well
+
+4. HEADER -> It routes based on the header and not on the routing key.
+
+5. DEFAULT -> The routing key matches with the queue name
+
+*** IT IS CLOUD FRIENDLY
+*** CROSS-LANGUAGE
+***SECURITY
+***MANAGEMENT
+
+**************************ACKS*****************************************************
+Message aknowledgements -> The message stays in the que until the consumer confirms that it received the message

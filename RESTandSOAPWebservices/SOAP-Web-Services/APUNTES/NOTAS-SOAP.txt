@@ -1,0 +1,57 @@
+Webservice --> It is a service available through the network
+
+Difference between webservice and webapp --> Webapps are meant to human consumption whereas webservices are for machine consumption
+
+Standards --> JAX-WS for web services and JAX-RS for rest web services
+
+SOAP --> Protocol
+REST --> It is a kind of architecture for bulding webservices
+
+It doesn´t matter if the systems are in different technologies ( Java in windows can communicate with .net in windows ) ==> INTEROPERABILITY
+
+*************************************************************************************************
+********************************************WEB SERVICE JARGON***********************************
+
+
+CONSUMER ----------> INTERFACE => XML -->WSDL (Contract, return types, methods, arguments, technology independent) ---------> Implementacion (Webservice)
+
+Any consumer will consume the Implementacion THROUGH the Interface
+
+WSDL --> Webservice Description Language
+
+UDDI --> Universal Description, Discovery and Integration -> Universal registry where you can query and search for web services --> Its not very popular
+
+SOAP -> Simple object access protocol
+
+SEI --> Service Endpoint Interface --> It makes the conversion between Java Objects and SOAP messages
+
+****************************************************************************************************************************
+**********************************UNDERSTANDING THE WSDL********************************************************************
+****************************************************************************************************************************
+
+It´s like a Java Interface but with an XML format
+
+**********ELEMENTS
+
+A Class is mapped to a webservice and a port --> A port consists of operations.
+
+It creates an input message for each operation --> Each message contains input types
+
+1. portType ---> Inside we have an operation with an input and output
+2. types --> It gives more detail about the input and data types --> The types contain elements such as strings
+3. messages --> A message consists of types and it works as the input output for the operations
+4. binding --> It´s how a webservice accesses request and gets response
+5. service --> It´s just a list of ports --> the address
+
+***An operation has only one INPUT and one OUTPUT even if the method has more than one input
+--> If there are multiple inputs for a method they are joined together in a MESSAGE.
+****Every method in a WSDL takes one message as the input and one message as the output
+
+***In the binding you find the transport --> http or https
+
+
+****** YOU CAN CONFIGURE A WEBSERVICE AS DOCUMENT OR RPC
+
+WITH RPC we dont have a types section anymore
+We hace a messages section that has the types inside of it
+-->Messages have PARTS inside of it with the inputs and output specifications

@@ -1,0 +1,10 @@
+Every 6 months a new version of the jdk is released
+LTS -> Long term support version every 3 years
+
+********JDK Vendors -> JVM
+
+Oracle
+OpenJDK
+OpenJ9
+Amazon Coretto --> James Gosling the father of Java works for Amazon
+   -->version 8 and 11 --> free support

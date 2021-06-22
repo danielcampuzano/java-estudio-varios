@@ -1,0 +1,57 @@
+**********************LAMBDAS********************
+
+Introduced since Java 8.
+Easier way to work with interfaces that have just one method.
+
+Every Lambda has three parts:
+
+1. The argument list
+2. The arrow
+3. The body
+
+*********It helps me to reduce the amount of code and just focus on the code I want to run
+
+********* You use curly braces if you want to have more than one statement inside the lambda's body
+
+--> The lambda doesn´t create an anonymous instance, it doesn´t create any instance. It is treated as a nested block
+
+--> Java util package --> Interfaces meant to use with lambda expressions
+
+**********Consumer interface
+->Accept method
+-> You pass the for each a lambda expression that meets the requirements of the consumer interface
+-> A Consumer accepts one argument and performs an action that doesn´t return a value
+-> It´s call a Consumer because it is Object in - nothing out
+
+-> The lambda we wrote accepts en Employee Object and doesn´t return anything -> It matches what the for each method expects a Consumer
+
+       employees.forEach((employee) -> {
+            System.out.println(employee.getName());
+            System.out.println(employee.getAge());
+        });
+		
+In each iteration it calls the Consumer's accept method passing the employee object as parameter.
+
+Ultimately is the consumer passed as the lambda expression that does the work.
+
+************Predicate Interface
+-> Test method (The functional method)
+-> Accepts one parameter and returns a boolean value -> The lambda
+-> Accepts a predicate that returns a boolean value
+-> The loop passes each employee to the predicate method which uses employee as a parameter for the lambda expression that maps to the predicate
+
+-> Predicate<Employee> is a lambda expression
+
+************Supplier Interface
+-> Doesn't accept any parameter and returns a value
+
+************FUNCTION Interface
+-> Accept a parameter and returns a value
+-> Apply method is the functional method
+
+--> We can pass functions to the part of the code that vary
+--> Can also be used with callbacks -> For example in a background thread we would like to specify what code to run when the data has been fetched
+
+-> It is very powerful because we can write methods that accept functions as parameters
+
+

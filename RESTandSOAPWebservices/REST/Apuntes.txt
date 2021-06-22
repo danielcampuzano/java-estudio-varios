@@ -1,0 +1,151 @@
+https://www.youtube.com/watch?v=xkKcdK1u95s&list=PLqq-6Pq4lTTZh5U8RbdXq0WaYvZBz2rbn
+
+RESTful API
+
+****REST Web Services
+
+Protocol --> Message format --> In a rest webservice you can send XML, JSON, Text as long as the client and the server understang each other
+
+HTTP Request
+
+Service Definition --> There is usually no documentation --> No WSDL like in SOAP
+
+REST --> Representational State Transfer --> It´s an architecture style --> Guideliness
+
+REST + WEB Services = RESTful Webservices
+
+The short answer is that REST stands for Representational State Transfer. It’s an architectural pattern for creating web services. A RESTful service is one that implements that pattern.
+
+HTTP --> Hypertext Transfer Protocol
+
+What is transfered is Hypertext
+
+Hypertext is text which contains logical links to other texts - Hyperlinks
+
+A common way to write Hypertext is using HTML (Hypertext Markup Language)
+
+*************************HTTP concepts that inspired REST**********************************
+
+1. Resource Locations --> APIs have addresses and the developer needs to decide what those addresses should be
+--> Resource based URI --> wheatherapp.com/zipcode/12345 --> wheatherapp.com/countries/brazil
+
+2. HTTP Methods or Verbs --> GET - POST - PUT - DELETE
+A good RESTful webservice API makes good use of this HTTP methods
+
+3. Metada --> Status codes, response headers which lets the service sends back extra information that might be useful for the client
+
+200 - Success
+500 - error
+404 - not found
+
+Why send status codes? So that the client understands what happened with the response
+
+4. Format of the message --> There is no specification that tells us what the format should be - XML, JSON, ETC
+-> How can the server identify what kind of data is sent. How does the client know what kind of data is returned by the server.
+-->They know because of a header value called CONTENT TYPE
+--> Interesting fact is that the same API can return different content types depending on what the clients want.
+
+
+***************************DESIGNING RESTFUL URIs**********************
+The consumers have to be aware of the URIs
+It´s good to have a URI convention
+
+Resource Uris --> Best practices --> everything has a uri that´s unique and standard
+
+0.  Think as if you had an HTML page and resources in folders
+
+1.  Use nouns not verbs --> profiles/getmessages (Not good) --> profiles/messages
+
+2. Use plurals -> /messages/{messageId} --> /profiles/{profileName}
+
+3. Resource relations --> Example, a message can have multiple comments
+--> I could use /comments/{commentId} --> But it doesn´t show that a comment has a relation to a message
+--> A message has a bunch of comments so it is better to use --> /messages/{messageId}/comments/{commentId}
+
+*****************************HTTP Methods***********************
+/messages/10 -> Can be used for GET, PUT, POST, DELETE the message with id = 10
+
+--> The URI says what resource are we accessing
+--> The method shows me the operation
+
+--> When we are creating a message we should point to the collection URI that should be /messages
+
+--> To create a new profile you should point to /profiles
+
+--> A GET to /messages --> gets all messages
+--> A DELETE to /messages/10/comments --> Deletes all comments of message 10
+
+***************************METHOD IDEMPOTENCE**************************
+GET -> Read only method
+POST, PUT, DELETE --> Write methods
+
+It´s safe to make multiple GET requests because the server is the same and response will be the same.
+
+Whata about PUT, POST, DELETE --> Repeatable and non - repeatable operations
+
+You can make the same GET, the same PUT, the same DELETE multiple times and there will be no problem, the first one es the only one that has effect
+
+**THE PROBLEM IS WITH ***POST*** it can't be repeated multiple times because it will create a new resource everytime
+
+
+********So GET, PUT and DELETE are Idempotent methods
+********POST is not idempotent --> Resource creation
+
+All what we've talked about are standards and if you don't implement them it can be confusing for clients
+
+Example: You can cache get requests
+
+*******************************REST RESPONSE**************************
+XML/JSON --> Different representations of the same resource
+REST -> Representational State Transfer --> You are getting representations of the resource
+
+***HEADERS --> Every HTTP Request or response has a body an headers
+Content Type -> Header
+
+STATUS CODES --> 200 Ok, 404 Not Found
+
+1XX Informational
+2XX Success Codes --> 201 Created --> 204 No Content
+3XX Redirection Codes --> 302 Found, 307 Temporary Redirect, 304 Not modified
+4XX Client error --> 400 bad request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 415 Unsupported media types
+5XX Server Error --> 500 Internal Server Error
+
+**************************HATEOAS************************************
+
+Hypermedia As The Engine Of Application State
+
+--> Example: Cliente Asks for a message --> /messages/20
+
+I return the message but also in the body I add URIs of interest such as
+
+"id": "20"
+"href": "/messages/20"
+"commentUri": "api/messages/20/comments"
+"likesUri": "api/messages/20/likes"
+
+So the client doesn´t need to have all this harcoded URIs.
+So this is guiding the client and this is what is called HATEOAS
+
+****USE rel atribute and an array of links
+
+***************THE RICHARDSON MATURITY MODEL***************************
+Is this API fully RESTful????
+How do you know how RESTful an API is?
+
+Level 3 --> HATEOAS --> Response have links that the clients can use
+Level 2 --> HTTP Methods 
+Level 1 --> Resource URI --> Individual URIs for each resource
+Level 0 --> Similar to a soap --> Just one URI and request body contains the details --> The action is a part of the message itself
+
+*******************WHAT IS JAX-RS**************************************
+In Java we have libraries for anything
+There are several libraries in Java like Jersey, RESTeasy, etc.
+Which library should I learn? --> If you learn one of them you should probably learn all of them
+--> Because they all follow the common API --> JAX-RS
+All this libraries implement JAX-RS
+--> JAX-RS --> Bunch of interfaces and annotations
+--> Jersey for example has implementation classes
+
+--> You just include Jersey and you will have all
+
+--> Jersey is a "Reference Implementation"

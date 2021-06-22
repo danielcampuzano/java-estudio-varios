@@ -1,0 +1,11 @@
+************************FLATMAP******************************************************
+-> We may want to transform an Object in more than one Object
+-> The method accepts a function that returns a stream value
+
+--> FLATMAP because it's often used to flatten nested lists.
+
+--> COLLECT is a terminal opertion and collects the steam's elements into another kind of result
+
+--> REDUCE --> Accepts to arguments and returns one.
+
+-> STREAMS ARE LAZILY EVALUATED -> Nothing is executed unless a terminal operation is found.

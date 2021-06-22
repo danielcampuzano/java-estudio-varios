@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.concurrent.CountDownLatch"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.amqp.core.Queue"/>
+    <fullyQualifiedTypeName name="org.springframework.amqp.core.TopicExchange"/>
+    <fullyQualifiedTypeName name="org.springframework.amqp.core.Binding"/>
+    <fullyQualifiedTypeName name="org.springframework.amqp.core.BindingBuilder"/>
+    <fullyQualifiedTypeName name="org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer"/>
+    <fullyQualifiedTypeName name="org.springframework.amqp.rabbit.connection.ConnectionFactory"/>
+    <fullyQualifiedTypeName name="org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.amqp.rabbit.core.RabbitTemplate"/>
+    <fullyQualifiedTypeName name="com.co.campu.learningrabbit.receiver.Receiver"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.CommandLineRunner"/>
+    <fullyQualifiedTypeName name="com.co.campu.learningrabbit.RabbitmqLearningApplication"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+</qualifiedTypeNameHistroy>

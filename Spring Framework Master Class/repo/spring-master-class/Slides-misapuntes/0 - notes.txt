@@ -1,0 +1,177 @@
+SPRING
+
+- It's a dependency injection framework
+
+- A class depends on other objects in order to work --> DEPENDENCY
+- If I directly instanciate the dependency in my class it is TIGHTLY COUPLED.
+- If I make my class dependent on just the interface so it is gonna be LOOSELY COUPLED
+- Interfaces help me to make my aplication loosely coupled --> When I instantiate my class in the constructor I can tell it what is the implementation
+of its dependency
+
+***** Things that I need to tell SPRING
+- What are the beans? --> With @Component I tell Spring that´s a bean
+- What are the dependencies of a bean? --> With @Autowired I tell Spring that it is a dependency of the bean
+- Where to search for beans? --> @ComponentScan --> By default in the main class there is a @SpringBootApplication and it looks for the beans
+on the main package
+
+***SPRING APPLICATION CONTEXT IS WHERE ALL THE BEANS ARE MANAGED
+
+***When Spring starts it looks for all the beans (classes with annotations) and then looks for their dependencies (@autowired)
+
+***Constructor injection and setter injection
+--> Use constructor injection if it is a necessary dependency
+--> Use setter injection if it is an optional dependency
+
+***Spring Modules --> Spring is divided in some modules, so it's easy to use just what you need.
+
+***Spring projects --> Solve different problems for different enterprise applications
+
+***Sometimes you have 2 or more implementations for an interface
+- You can use @primary in top of the implementation you prefer to use
+- There is another way, it is with @Qualifier("name") in top of the implementations and then when you
+autowire them you choose the name of the implementatio you want to use
+autowire them you choose the name of the implementatio you want to use
+
+********************************BEAN SCOPE********************************
+- By default in Spring a bean is SINGLETONN..... There's a unique instance across the entire application.
+- PROTOTYPE --> A new bean is created every time you request it ---> You anotate the bean with @Scope("prototype")
+- REQUEST   --> One bean per HTTP request.
+- SESSION   --> One bean per HTTP session.
+
+********************************PROXY
+If I have a singleton bean which has a dependency that I want to be of prototype scope then I add the @Scope and Proxy propertie 
+to the dependency
+
+****Component Scan***********
+If have a package that is outside the main packagee so I need to add @ComponentScan("packageName") to the 
+SpringApplicationClass which is the class that runs the application
+
+****LIFECYCLE OF A BEAN*********
+@PostConstruct --> Is executed as soon as the bean is created
+@PreDestroy --> It's called just before the bean is removed from the context
+
+*****CDI Context and Dependency Injection************
+CDI is like the interface --> It shows annotations --> @Inject(autowired), @Named(component), @Singleton
+Spring implements CDI so if you replace @Named for @Component it still works.
+
+********You can replace SpringBoot by removing the @SpringBootApplication and using a @Configuration
+and a @ComponentScan annotations. He also changed the class that initializes the app in the main method
+and replaced it for an ApplicationContext or something like that.
+
+****Application Context Using XML
+You create a file named ApplicationContext.xml and you define the beans there and also the dependencies
+
+*********@Component, controller, service, repository
+
+********READ VALUES FROM EXTERNAL PROPERTIES FILE
+@Value("${external.service.url}") in the class
+And in the main class add @PropertySource("classpath:app.properties")
+
+**********************************JUNIT*****************************************************************
+Unit testing is writing tests for individual methods or classes
+JUnit is framework which is used for unit testing
+They are automated and can be run easily in CI
+--> Create a new src folder called test
+The package should have the same name
+And class the same name followed by Test
+
+*******************************MOCKITO******************************************************************
+You can mock a dependency --> For example an interface.
+And use the method when to set a response in case a method is called.
+-- You use mock(dljfklsdf.class)
+
+*******************************UNIT TESTING WIITH SPRING************************************************
+¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨AVOID USING SPRINGRUNNER AND CONTEXT´´´´´´´´´´´´´´´´´´´´´´´´´
+IT IS MUCH BETTER JUST USING MOCKITO AND JUNIT FOR BUSINESS LOGIC
+
+--> ADD Spring Test - JUnit - Mockito
+--> Annotate the test with @ContextConfiguration(classes = SpringBootApplication5Steps.class)
+--> @RunWith(SpringRunner.class)
+--> I can still use @Autowired in order to get the bean from the context
+
+**********************Using mockito you dont need what is above
+--> @RunWith(MockitoJunitRunner.class)
+
+@InjectMocks
+SomeCdiBusiness business;
+
+@Mock
+SomeCdiDao daoMock;
+
+Inside the test --> Mockito.when(daoMocK ......... etc etc
+
+*****************SPRING BOOT*************************************************
+@RestController annotation
+
+You usually use mockito to test your classes...... In the dependencies
+
+
+*********************************DATABASES****************************************
+**********************************************************************************
+**********************************************************************************
+1. With JDBC
+---> I can get the datasource using JdbcTemplate which is used with Spring.
+
+@Autowired
+JdbcTemplate jdbcTemplate
+
+when you excute the query you need a mapper, it depends --> RowMapper or BeanPropertyRowMapper(Person.class)
+jdbcTemplate.query("select ....", Mapper);
+
+1.1 With pure JDBC instead of JdbcTemplate it is more complex due that you have to create a Connection, 
+a PreparedStatement, etc.
+
+2. With JPA --> It has an implementation which is HIBERNATE --> It is a famous ORM --> Object relational mapping framework.
+
+You use @Entity and an EntityManager in the Repository --> The entitymanager manages all the entities.All operations
+that you are performing in a specific session are all stored in the entitymanager --> They are really stored in the
+PersistenceContext --> EntityManager is the interface to the PersistenceConext
+
+So in SPRING ---> @PersistenceContext
+		  EntityManager em;
+
+******JPQL --> Java Persistence Query Language
+You can use named queries which you define above the Entity
+
+Ideally @Transactional
+
+*******************************************************************
+*******************************************************************
+*******************************************************************
+
+BASIC WEB APP --> Login servlet, web.xml and pom.xml
+
+WHAT IS A SERVLET?????????? ---> It´s a simple java class that can take a request in and can respond back
+with the response.
+**HTTP Servlet -> HTTP Request as input and HTTP Response as output
+javax servlet package --> JavaEE6
+
+JAVA EE came with the cocept of JSP --> Java Server Pages --> Return dynamic content to the web browser very easy.
+In the JSPs are compiled to a servlet.
+
+From the servlet you redirect to the jsp --> request.getRequestDispatcher("......./login.jsp").forward(request, response)
+The parameter is what is passed between the browser and the application servlet
+But between the servlet and the JSP we send an atribute
+
+*************SCRIPLETS*************************
+When inside a servlet I write code different from HTML using <% %>
+
+*********NOTE: In the web.xml is where your java EE server will start looking for servlets
+
+
+***************************            ***********************************************
+*************************** SPRING MVC ***********************************************
+***************************            ***********************************************
+Add spring mvc to the pom.xml
+It uses a front controller pattern  ---> Dispatcher servlet
+**Add the Dispatcher Servlet to the web.xml
+Spring application context .xml --> Component Scan
+
+All the requests first will go to the front controller --> And then it is send to a Controller or to a JSP
+
+Spring MVC Controller --> Handles the request and then answers back to the dispatcher servlet
+Spring MVC View Resolver --> It has a prefix and a sufix
+****************** IT GOES INSIDE THE xml file where we added the component scan
+Views --> .jsp
+
+

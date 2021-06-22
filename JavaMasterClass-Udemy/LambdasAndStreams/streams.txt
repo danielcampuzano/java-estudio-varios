@@ -1,0 +1,44 @@
+********************************STREAMS********************************
+
+*Introduced in Java 8
+
+--> ORACLE definition -> A sequence of elements supporting sequential and parallel aggregate operations.
+
+Stream -> A sequence of computations -> A set of computational steps that are chained together
+
+* The collection won't be changed when we work with streams
+* stream operations are stateless
+
+***************************IMPORTANT*********************************************
+
+***This operation name ( :: ) Is know as a "METHOD REFERENCE" --> So we can use them when a lambda does its call to an existing method.
+
+.map(String::toUpperCase)
+
+Class::Method
+
+****************************************************************************
+
+*** The map accepts a FUNCTION as a parameter --> A function accepts one argument and returns a value
+* It is called a map because is mapping each item in the input stream to the result returned by the function argument -> The resulting stream will have the same number of items as the source stream.
+
+***Filter method --> Wants a PREDICATE -> Ex: A lambda function that accepts one parameter and returns a true-false value.
+
+**.forEach(System.out::println)
+-> Accepts a consumer as a parameter
+-> We can map the System.out.println(param) to a CONSUMER because it receives a parameter and doesn't return anything.
+
+*****TERMINAL OPERATION
+Example foreach because it doesn't return anything. 
+-> Returns a void or a non stream operation.
+
+*****INTERMIATE OPERATIONS***********
+-> Operations that return a stream.
+
+************************************************************************
+************************************************************************
+PEAK -> It's maim aim is for debugging purposes
+
+What if we want to print the values without ending the stream
+-> You can use the PEEK method -> It is an intermiate operation -> Accepts a consumer argument -> It evaluates the CONSUMER for each item in the source stream and then adds the item to a new stream which then returns.
+.peek(System.out::println)
