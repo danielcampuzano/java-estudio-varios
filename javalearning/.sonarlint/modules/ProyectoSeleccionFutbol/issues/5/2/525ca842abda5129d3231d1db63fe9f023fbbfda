@@ -1,0 +1,27 @@
+
+r
+squid:S106";Replace this usage of System.out or System.err by a logger.(á÷õ•ÿÿÿÿÿ8†ÎøÏù,HJRMAJORZ
+CODE_SMELL
+m
+squid:S106 ";Replace this usage of System.out or System.err by a logger.(ôğ‚Ï8†ÎøÏù,HERMAJORZ
+CODE_SMELL
+msquid:S1118":Add a private constructor to hide the implicit public one.(¸›ü“8Ç˜€Ïù,HFRMAJORZ
+CODE_SMELL
+m
+squid:S106";Replace this usage of System.out or System.err by a logger.(¶Âà‘8†ÎøÏù,HIRMAJORZ
+CODE_SMELL
+r
+squid:S106";Replace this usage of System.out or System.err by a logger.(§Áü¸ùÿÿÿÿ8†ÎøÏù,HHRMAJORZ
+CODE_SMELL
+m
+squid:S106";Replace this usage of System.out or System.err by a logger.(‘ê¦å8†ÎøÏù,HKRMAJORZ
+CODE_SMELL
+r
+squid:S106"";Replace this usage of System.out or System.err by a logger.(šö»¡üÿÿÿÿ8†ÎøÏù,HBRMAJORZ
+CODE_SMELL
+isquid:S1481"1Remove this unused "entrenadores" local variable.(éÔš üÿÿÿÿ8şïù,HGRMINORZ
+CODE_SMELL
+qsquid:S1854"@Remove this useless assignment to local variable "entrenadores".(éÔš üÿÿÿÿ8şïù,HDRMAJORZBUG
+r
+squid:S106";Replace this usage of System.out or System.err by a logger.(£­Ìûÿÿÿÿ8†ÎøÏù,HCRMAJORZ
+CODE_SMELL

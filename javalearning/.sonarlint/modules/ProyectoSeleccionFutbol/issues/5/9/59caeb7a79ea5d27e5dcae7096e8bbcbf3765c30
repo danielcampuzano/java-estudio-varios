@@ -1,0 +1,19 @@
+
+r
+squid:S106#";Replace this usage of System.out or System.err by a logger.(ªĞ²¯úÿÿÿÿ8¢ÄĞù,HLRMAJORZ
+CODE_SMELL
+m
+squid:S106%";Replace this usage of System.out or System.err by a logger.(½úğİ8¢ÄĞù,HMRMAJORZ
+CODE_SMELL
+m
+squid:S106/";Replace this usage of System.out or System.err by a logger.(ªÈ¾µ8É„ïù,HNRMAJORZ
+CODE_SMELL
+r
+squid:S106&";Replace this usage of System.out or System.err by a logger.(¤¨œ úÿÿÿÿ8¢ÄĞù,HORMAJORZ
+CODE_SMELL
+m
+squid:S106$";Replace this usage of System.out or System.err by a logger.(šäøÎ8¢ÄĞù,HPRMAJORZ
+CODE_SMELL
+r
+squid:S106.";Replace this usage of System.out or System.err by a logger.(Ü¸¨ùÿÿÿÿ8É„ïù,HQRMAJORZ
+CODE_SMELL

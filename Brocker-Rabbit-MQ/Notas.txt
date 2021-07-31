@@ -1,3 +1,5 @@
+https://www.cloudamqp.com/blog/part3-rabbitmq-for-beginners_the-management-interface.html
+
 ***************MESSAHE BROKER*******************
 
 *A message broker helps to DECOUPLE applications
