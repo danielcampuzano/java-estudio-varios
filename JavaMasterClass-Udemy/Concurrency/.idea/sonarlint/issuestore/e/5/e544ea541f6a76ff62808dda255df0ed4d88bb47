@@ -1,0 +1,13 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(èÆê€şÿÿÿÿ
+P
+java:S1161":Add the "@Override" annotation above this method signature(“–ış
+S	java:S106"9Replace this use of System.out or System.err by a logger.(‡íóşÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(…Úìì
+M	java:S106"9Replace this use of System.out or System.err by a logger.(³ÜÊ
+t
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¶û™ü
+T	java:S106"9Replace this use of System.out or System.err by a logger.(÷ü¶y8µó„’1
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(€¾°åúÿÿÿÿ8§µ’1
+Q	java:S125"<This block of commented-out lines of code should be removed.(ó£
