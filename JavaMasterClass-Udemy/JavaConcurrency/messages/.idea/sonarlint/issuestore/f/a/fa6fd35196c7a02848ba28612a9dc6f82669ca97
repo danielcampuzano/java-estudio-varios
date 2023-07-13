@@ -1,0 +1,22 @@
+
+t
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+>	java:S108")Either remove or fill this block of code.(ä ¹€
+t
+java:S2142#"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+>	java:S108#")Either remove or fill this block of code.(ä ¹€
+E
+java:S11976"*Move the array designators [] to the type.(µ«‹®øÿÿÿÿ
+3
+java:S2119="Save and re-use this "Random".(¼ÝÅf
+t
+java:S2142C"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+>	java:S108C")Either remove or fill this block of code.(ä ¹€
+3
+java:S2119U"Save and re-use this "Random".(¼ÝÅf
+S	java:S106W"9Replace this use of System.out or System.err by a logger.(âí’µþÿÿÿÿ
+{
+java:S2142Z"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8 ú‚­”1
+>	java:S108Z")Either remove or fill this block of code.(ä ¹€
+1
+java:S1700"Rename field "message"(ù„è¿ûÿÿÿÿ

@@ -1,0 +1,13 @@
+
+3
+java:S2119""Save and re-use this "Random".(¼İÅf
+t
+java:S2142-"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(ÑôÃ°ıÿÿÿÿ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(‘½®
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(õßÃ
+U	java:S106J"9Replace this use of System.out or System.err by a logger.(Ê’ŞÇ8¬õøŞ”1
+Z	java:S106M"9Replace this use of System.out or System.err by a logger.(ÌóİÍúÿÿÿÿ8­õøŞ”1
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ëòíšıÿÿÿÿ
+s	java:S135D"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
